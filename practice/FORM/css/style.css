@@ -1,0 +1,5 @@
+body{
+    background-color: antiquewhite;
+}
+::placeholder{color: blue;}
+p{color: red;}

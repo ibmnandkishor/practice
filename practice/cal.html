@@ -1,0 +1,83 @@
+// calendar-demo.component.ts
+    
+import { Component, ViewChild } from '@angular/core';
+import { IonDatetime } from '@ionic/angular';
+import { format, parseISO } from 'date-fns';
+
+@Component({
+  selector: 'calendar-demo',
+  templateUrl: './calendar-demo.component.html',
+  styleUrls: ['./calendar-demo.component.css']
+})
+export class CalendarDemo {
+  @ViewChild(IonDatetime, { static: true }) datetime: IonDatetime;
+
+  startDate = '';
+  endDate = '';
+
+  constructor() {}
+
+  formatDate(value: string) {
+    return format(parseISO(value), 'MMM dd yyyy');
+  }
+}
+
+<!-- calendar-demo.component.html -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calendar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="component-content">
+  <ion-list [inset]="true">
+    <ion-item>
+      <ion-input placeholder="Title"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-input placeholder="Location"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list [inset]="true">
+    <ion-accordion-group value="start">
+      <ion-accordion value="start">
+        <ion-item slot="header">
+          <ion-label>Starts</ion-label>
+          <ion-note slot="end">{{ startDate }}</ion-note>
+        </ion-item>
+        <ion-datetime
+          #startDatetime
+          presentation="date-time"
+          slot="content"
+          (onIonChange)="startDate = formatDate(startDatetime.value)"
+        ></ion-datetime>
+      </ion-accordion>
+      <ion-accordion value="end">
+        <ion-item slot="header">
+          <ion-label>Ends</ion-label>
+          <ion-note slot="end">{{ endDate }}</ion-note>
+        </ion-item>
+        <ion-datetime
+          #endDatetime
+          presentation="date-time"
+          slot="content"
+          (onIonChange)="endDate = formatDate(endDatetime.value)"
+        ></ion-datetime>
+      </ion-accordion>
+    </ion-accordion-group>
+    <ion-item>
+      <ion-label>Repeat</ion-label>
+      <ion-note slot="end">Never</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Travel Time</ion-label>
+      <ion-note slot="end">None</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alert</ion-label>
+      <ion-note slot="end">None</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>

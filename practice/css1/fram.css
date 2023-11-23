@@ -1,0 +1,102 @@
+
+body {
+  background-color: aqua;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  border: 5px solid black;
+  text-align: center;
+  background-color: blueviolet;
+  font-size: 40px;
+}
+
+.banner {
+  height: 80px;
+  width: 100%;
+  border: 5px solid black;
+  margin-top: 30px;
+  text-align: center;
+  background-color: beige;
+  font-size: 40px;
+}
+
+.leftside {
+  height: 600px;
+  width: 500px;
+  float: left;
+  border: 5px solid black;
+  margin-top: 50px;
+  margin-left: 30px;
+  text-align: center;
+  background-color: gold;
+  font-size: 40px;
+}
+
+.content {
+  height: 600px;
+  width: 1200px;
+  border: 5px solid black;
+  margin-top: 50px;
+  border: 5px solid black;
+  float: right;
+  background-color: lightgreen;
+}
+
+.four {
+  height: 260px;
+  width: 1150px;
+  border: 5px solid black;
+  margin-top: 30px;
+  margin-left: 20px;
+  background-color: green;
+}
+
+.third {
+  height: 260px;
+  width: 1150px;
+  border: 5px solid black;
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: brown;
+  font-size: 40px;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 680px;
+  
+  border: 5px solid black;
+  text-align: center;
+  background-color: purple;
+  font-size: 40px;
+}
+
+
+.first {
+  height: 200px;
+  width: 500px;
+  border: 2px solid black;
+  margin-left: 10px;
+  float: left;
+  margin-top: 20px;
+  text-align: center;
+  background-color: brown;
+  font-size: 40px;
+}
+
+.second {
+  height: 200px;
+  width: 500px;
+  border: 2px solid black;
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: brown;
+  font-size: 40px;
+}
